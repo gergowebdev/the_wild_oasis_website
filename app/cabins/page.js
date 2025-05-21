@@ -2,6 +2,10 @@ import { Suspense } from "react";
 import CabinList from "../_components/CabinList";
 import Spinner from "../_components/Spinner";
 
+// middle ground, refresh the data once per hour, 60 x 60
+// data that changes time to time, but not constantly
+export const revalidate = 3600;
+
 export const metadata = {
     title: "Cabins",
 };
