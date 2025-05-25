@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import CabinList from "../_components/CabinList";
 import Spinner from "../_components/Spinner";
 import Filter from "../_components/Filter";
+import ReservationReminder from "../_components/ReservationReminder";
 
 // middle ground, refresh the data once per hour, 60 x 60
 // data that changes time to time, but not constantly
@@ -34,6 +35,7 @@ export default function Page({ searchParams }) {
 
             <Suspense fallback={<Spinner />} key={filter}>
                 <CabinList filter={filter} />
+                <ReservationReminder />
             </Suspense>
         </div>
     );
